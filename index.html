@@ -1,0 +1,196 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#07172f">
+  <meta name="description" content="Una pequeña sorpresa entre las estrellas.">
+  <title>Un universo para ti ✦</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <canvas id="sky" aria-hidden="true"></canvas>
+  <div class="nebula nebula-one"></div>
+  <div class="nebula nebula-two"></div>
+
+  <header class="topbar">
+    <a class="brand" href="#inicio">✦ un universo para ti</a>
+    <button id="musicBtn" class="music-btn" aria-pressed="false">
+      ♫ Activar música
+    </button>
+    <audio id="music" src="audio/cancion.mp3" loop></audio>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <span class="eyebrow">✧ HOY EL UNIVERSO CELEBRA ✧</span>
+      <div class="hero-star" aria-hidden="true">✦</div>
+      <p class="small-intro">Esta noche, las estrellas brillan por alguien especial...</p>
+
+      <!-- CAMBIA ESTE NOMBRE POR EL SUYO -->
+      <h1>Feliz cumpleaños,<br>
+        <span class="gradient-text">mi pequeña estrella</span>
+      </h1>
+
+      <p class="hero-description">
+        Hoy no es un día cualquiera. Hoy el mundo celebra
+        los 15 años de una personita que hace más bonito el universo.
+      </p>
+
+      <div class="age">15 <span>vueltas al sol ☼</span></div>
+
+      <a class="primary-btn" href="#dedicatoria">
+        Descubre tu sorpresa <span>↓</span>
+      </a>
+      <p class="scroll-note">Desliza para comenzar este pequeño viaje ✧</p>
+    </section>
+
+    <section class="section intro-section" id="dedicatoria">
+      <p class="eyebrow">01 — UN DESEO PARA TI</p>
+      <h2>Si pudiera regalarte el universo...</h2>
+      <p class="section-text">
+        Te regalaría cada estrella del cielo, para que nunca olvides
+        lo mucho que mereces brillar. Te regalaría la luna para que
+        te acompañe en las noches difíciles, y un cielo infinito
+        para que nunca dejes de soñar.
+      </p>
+      <p class="signature">Porque personas como tú hacen brillar el mundo. 🩵</p>
+      <div class="floating-hearts" aria-hidden="true">♡　✧　♡　✦　♡</div>
+    </section>
+
+    <section class="section" id="carta">
+      <p class="eyebrow">02 — ALGO QUE QUIERO DECIRTE</p>
+      <h2>Una carta para ti </h2>
+      <p class="section-text">
+        Hay palabras que merecen un lugar especial.
+        Preparé unas para ti, desde el corazón.
+      </p>
+      <div class="letter-card">
+        <div class="envelope-icon">✉</div>
+        <h3>Para una estrella muy especial</h3>
+        <p>Una pequeña carta guardada con mucho cariño.</p>
+        <button class="primary-btn" id="openLetter">
+          Abrir mi carta 
+        </button>
+      </div>
+    </section>
+
+    <section class="section" id="recuerdos">
+      <p class="eyebrow">03 — PEQUEÑOS INSTANTES, GRANDES RECUERDOS</p>
+      <h2>Un rincón de nuestros recuerdos</h2>
+      <p class="section-text">
+        Porque hasta los momentos más sencillos pueden convertirse
+        en recuerdos que brillan para siempre.
+      </p>
+
+      <div class="gallery">
+        <article class="memory">
+          <img src="fotos/foto1.jpg" alt="Un recuerdo especial">
+          <div><span>✧ RECUERDO 01</span><h3>Un momento bonito</h3>
+          <p>Hay instantes que merecen quedarse para siempre.</p></div>
+        </article>
+        <article class="memory">
+          <img src="fotos/foto2.jpg" alt="Un momento para recordar">
+          <div><span>✧ RECUERDO 02</span><h3>Una sonrisa inolvidable</h3>
+          <p>De esos momentos que hacen más bonito un día.</p></div>
+        </article>
+        <article class="memory">
+          <img src="fotos/foto3.jpg" alt="Otro recuerdo especial">
+          <div><span>✧ RECUERDO 03</span><h3>Un pedacito de felicidad</h3>
+          <p>Un pequeño recuerdo, un cariño enorme.</p></div>
+        </article>
+      </div>
+      <p class="hint">Puedes reemplazar estas imágenes por las fotos que más te gusten.</p>
+    </section>
+
+    <section class="section wishes-section" id="deseos">
+      <p class="eyebrow">04 — DESEO QUE...</p>
+      <h2>Tu nuevo capítulo esté lleno de magia</h2>
+      <div class="wish-grid">
+        <article class="wish"><span>☾</span><h3>Muchos sueños</h3>
+          <p>Que nunca te falten motivos para mirar al cielo y soñar en grande.</p></article>
+        <article class="wish"><span>✧</span><h3>Momentos felices</h3>
+          <p>Que tu vida se llene de risas, aventuras y recuerdos preciosos.</p></article>
+        <article class="wish"><span>♡</span><h3>Mucho cariño</h3>
+          <p>Que siempre recuerdes lo valiosa y especial que eres.</p></article>
+      </div>
+    </section>
+
+    <section class="section game-section" id="juego">
+      <p class="eyebrow">05 — UNA PEQUEÑA MISIÓN</p>
+      <h2>Recolecta tus estrellas </h2>
+      <p class="section-text">
+        Hay 5 estrellas escondidas en este cielo.
+        Toca cada una para recogerla y descubrir la sorpresa final.
+      </p>
+      <div class="game-panel">
+        <div class="game-status">
+          <span>Estrellas encontradas</span>
+          <strong><span id="score">0</span> / 5</strong>
+        </div>
+        <div id="gameSky" class="game-sky" aria-label="Zona del juego">
+          <p id="gameHint">¡Busca y toca las cinco estrellas! ✦</p>
+        </div>
+        <p id="gameMessage" class="game-message" aria-live="polite">
+          Tu aventura comienza aquí, pequeña estrella.
+        </p>
+        <button id="restartGame" class="secondary-btn">Volver a jugar ↻</button>
+      </div>
+    </section>
+
+    <section class="section secret-section" id="secreto">
+      <p class="eyebrow">06 — SOLO PARA TI</p>
+      <h2>Hay algo más que quiero decirte...</h2>
+      <p class="section-text">
+        Has llegado al último rincón de este universo.
+        ¿Lista para descubrir tu mensaje secreto?
+      </p>
+      <button id="revealSecret" class="primary-btn" disabled>
+         Revelar mi mensaje secreto
+      </button>
+      <div id="secretMessage" class="secret-message" hidden>
+        <div class="secret-star">✦</div>
+        <h3>Mi deseo para ti 🩵</h3>
+        <p>
+          Nunca dejes de ser esa personita tan especial que eres.
+          Que tus 15 años sean el comienzo de aventuras hermosas,
+          que tus sueños encuentren su camino y que, incluso en tus
+          noches más oscuras, recuerdes que siempre hay una luz en ti.
+          El universo es enorme, pero hoy quiero que sepas que mereces
+          todas las cosas bonitas que la vida tiene para ofrecerte.
+        </p>
+        <p class="signature">Feliz cumpleaños. Sigue brillando. </p>
+      </div>
+    </section>
+
+    <section class="final-section">
+      <div class="final-star">✧</div>
+      <p>Para alguien que merece un cielo entero...</p>
+      <h2>Que tus 15 años sean inolvidables. 🩵</h2>
+      <p class="final-small">Con mucho cariño, de alguien que quiso hacerte sonreír.</p>
+      <a href="#inicio" class="back-link">Volver a mirar las estrellas ↑</a>
+    </section>
+  </main>
+
+  <footer>Hecho con cariño, un poquito de código y muchas estrellas. ✦</footer>
+
+  <dialog id="letterDialog" class="letter-dialog">
+    <button id="closeLetter" class="close-btn" aria-label="Cerrar carta">✕</button>
+    <span class="eyebrow">UNA CARTA ESCRITA PARA TI</span>
+    <div class="dialog-star">✧</div>
+    <h2>Feliz cumpleaños, estrellita 🩵</h2>
+    <div class="letter-content">
+      <p>Hoy es un día muy especial, porque hace 15 años llegó al mundo una personita que merece muchísimas cosas bonitas.</p>
+      <p>Deseo que esta nueva etapa te regale momentos inolvidables, sueños cumplidos, amistades sinceras y muchas razones para sonreír. Nunca dudes de lo mucho que vales ni de todo lo bonito que puedes lograr.</p>
+      <p>Si alguna vez sientes que el cielo está oscuro, recuerda que incluso las estrellas necesitan la noche para brillar. No tienes que ser perfecta para ser increíble; basta con que sigas siendo tú.</p>
+      <p>Espero que hoy te sientas muy querida, que sonrías muchísimo y que guardes este pequeño detalle como un recuerdo bonito de tus 15 años.</p>
+      <p class="signature">Con mucho cariño, alguien que desea verte feliz. </p>
+    </div>
+    <p class="dialog-footer">Con cariño, bajo el mismo cielo. ♡</p>
+  </dialog>
+
+  <div id="toast" class="toast" aria-live="polite"></div>
+</body>
+</html>
